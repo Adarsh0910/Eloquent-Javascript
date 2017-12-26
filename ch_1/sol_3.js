@@ -1,9 +1,14 @@
 var size = 7;
-var board = '';
-for (var i = 1; i <= size; i++){
-  for(var j = 1; j <= i;j++){
-    board += '*';
+var patt = '';
+for (var i = 0; i < size; i++){
+  for(var j = 0; j < size;j++){
+    if((i+j) % 2 == 0){
+      patt += ' ';
+    }
+    else {
+      patt += '#';
+    }
   }
-  board += '\n';
+  patt += '\n';
 }
-console.log(board);
+console.log(patt);
